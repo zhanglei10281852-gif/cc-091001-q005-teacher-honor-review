@@ -1,0 +1,1 @@
+{"name":"teacher-honor-review","version":"0.1.0","private":true,"type":"module","scripts":{"test":"node --test"},"engines":{"node":">=20"},"description":"教师荣誉推荐评审领域资料"}
