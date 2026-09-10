@@ -1,0 +1,2 @@
+import test from 'node:test'; import assert from 'node:assert/strict'; import { readFile } from 'node:fs/promises'; import { roundStates, scoreCategories } from '../src/domain.js';
+test('评审样例具备版本和法定人数信息', async () => { const data=JSON.parse(await readFile(new URL('../fixtures/review-context.json', import.meta.url))); assert.ok(roundStates.includes(data.roundState)); assert.ok(data.assignedReviewers>=data.quorum); assert.ok(data.materialVersion>0); assert.equal(scoreCategories.length,4); });
